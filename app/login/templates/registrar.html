@@ -1,0 +1,32 @@
+{% extends "base/content.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block forms %}
+
+    <form action="#" method="post">
+        {% csrf_token %}
+        {{ form |crispy }}
+
+      <div class="d-flex mb-5 align-items-center">
+
+        <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span>
+      </div>
+
+      <input type="submit" value="Registrar" class="btn text-white btn-block btn-primary">
+
+      <span class="d-block text-left my-4 text-muted"> or sign in with</span>
+
+      <div class="social-login">
+        <a href="#" class="facebook">
+          <span class="icon-facebook mr-3"></span>
+        </a>
+        <a href="#" class="twitter">
+          <span class="icon-twitter mr-3"></span>
+        </a>
+        <a href="#" class="google">
+          <span class="icon-google mr-3"></span>
+        </a>
+      </div>
+    </form>
+{% endblock forms %}
